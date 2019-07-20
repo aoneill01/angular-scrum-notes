@@ -1,0 +1,12 @@
+<h2>Yesterday, I …</h2>
+<app-itemized-list [items]="note.yesterday"></app-itemized-list>
+<h2>Today, I will …</h2>
+<app-itemized-list [items]="note.today"></app-itemized-list>
+<h2>I am blocked by …</h2>
+<app-itemized-list [items]="note.blockers"></app-itemized-list>
+<p *ngIf="note.blockers.length === 0">
+    Nothing!
+    <span role="img" aria-label="tada!">
+        🎉
+    </span>
+</p>
